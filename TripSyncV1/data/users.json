@@ -1,0 +1,31 @@
+[
+    {
+        "id": "1",
+        "name": "John Smith",
+        "email": "john@example.com",
+        "password_hash": "pbkdf2:sha256:260000$o9RvJwFOJU3x2FqO$dffc993c24dc7c21a32c5b103f2a05b5e2b996e78125a5f2edc3b35daa64b0a7",
+        "profile_picture": "https://ui-avatars.com/api/?name=John+Smith&background=random",
+        "rating": "4.8",
+        "reviews": [
+            {
+                "reviewer_id": "2",
+                "reviewer_name": "Sarah Johnson",
+                "rating": "5",
+                "comment": "Great driver, very punctual!"
+            }
+        ],
+        "trips_as_driver": ["1", "3"],
+        "trips_as_passenger": []
+    },
+    {
+        "id": "2",
+        "name": "Sarah Johnson",
+        "email": "sarah@example.com",
+        "password_hash": "pbkdf2:sha256:260000$JsSn7BlwQYgCN1gw$c58da9c5c12a94ef4c2f469244e7c521a14a4ea42f5c0e5b7536e5d4b7a09b03",
+        "profile_picture": "https://ui-avatars.com/api/?name=Sarah+Johnson&background=random",
+        "rating": "4.5",
+        "reviews": [],
+        "trips_as_driver": ["2"],
+        "trips_as_passenger": ["1"]
+    }
+]

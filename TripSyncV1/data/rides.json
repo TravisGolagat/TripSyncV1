@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "driver_id": "1",
+        "from": "University of Toronto",
+        "to": "McMaster University",
+        "date": "2023-07-15",
+        "time": "08:00",
+        "price": "25",
+        "seats": "3",
+        "available_seats": "2",
+        "passengers": ["2"]
+    },
+    {
+        "id": "2",
+        "driver_id": "2",
+        "from": "Western University",
+        "to": "University of Waterloo",
+        "date": "2023-07-16",
+        "time": "10:00",
+        "price": "30",
+        "seats": "4",
+        "available_seats": "4",
+        "passengers": []
+    },
+    {
+        "id": "3",
+        "driver_id": "1",
+        "from": "York University",
+        "to": "Queen's University",
+        "date": "2023-07-17",
+        "time": "09:00",
+        "price": "35",
+        "seats": "2",
+        "available_seats": "2",
+        "passengers": []
+    }
+]

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer a Ride - TripSync</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/search">Find Rides</a></li>
+                    <li><a href="/offer">Offer a Ride</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-auth">
+                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <!-- Main Content -->
+    <!-- Offer Ride Page -->
+    <section class="offer-ride">
+        <div class="container">
+            <div class="offer-ride-card">
+                <h2>Offer a Ride</h2>
+
+                <form class="offer-form">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="from">Pickup Location</label>
+                            <input type="text" class="form-control" id="from" name="from" placeholder="Enter your starting point (e.g., university name)">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="to">Destination</label>
+                            <input type="text" class="form-control" id="to" name="to" placeholder="Enter your destination">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Departure Date</label>
+                            <input type="date" class="form-control" id="date" name="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Departure Time</label>
+                            <input type="time" class="form-control" id="time" name="time">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="seats">Available Seats</label>
+                            <input type="number" class="form-control" id="seats" name="seats" min="1" max="8" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price per Seat</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="price" name="price" min="1" step="0.01" placeholder="0.00">
+                                <div class="input-group-append">USD</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="notes">Additional Notes (Optional)</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Add any details about your ride, like meeting point, luggage space, etc."></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary btn-lg width-100">Post Your Ride</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/search">Find a Ride</a></li>
+                        <li><a href="/offer">Offer a Ride</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/offer.js"></script>
+    <script src="/static/js/profiles.js"></script>
+    <script src="/static/js/booking.js"></script>
+
+</body>
+</html>

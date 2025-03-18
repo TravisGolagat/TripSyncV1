@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - TripSync</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/template/index.html" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/search">Find Rides</a></li>
+                    <li><a href="/offer">Offer a Ride</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-auth">
+                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <!-- Main Content -->
+    <!-- FAQ Page -->
+    <section class="faq-page">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about TripSync</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How does TripSync work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>TripSync connects university students who are traveling in the same direction. Drivers can offer available seats in their vehicles, while passengers can book rides to their destinations. The platform facilitates the connection, payment, and communication between drivers and passengers.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Is TripSync only for university students?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>Yes, TripSync is designed specifically for university students. We verify users through their university email addresses to ensure a safe and trusted community. This helps create connections between students who have similar travel needs and schedules.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How much does it cost to use TripSync?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>TripSync is free to join and search for rides. When booking a ride, passengers pay the price set by the driver. This typically covers a share of the gas, vehicle maintenance, and other travel expenses. Drivers set their prices based on distance, duration, and other factors.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How do I offer a ride?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>To offer a ride, log in to your TripSync account and click on the "Offer a Ride" button. Fill in the details of your trip, including departure location, destination, date, time, price per seat, and the number of available seats. Once submitted, your ride will be visible to potential passengers searching for rides on that route.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How do I book a ride?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>To book a ride, search for available rides by entering your departure location, destination, and date. Browse through the available options and click on a ride to view its details. If you decide to book, click the "Book Now" button and follow the instructions to confirm your booking.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Is carpooling with TripSync safe?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>TripSync prioritizes safety by verifying all users through their university email addresses. We also have a rating and review system that helps users make informed decisions about who they travel with. Additionally, our platform provides features for sharing trip details with trusted contacts and real-time tracking during trips.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>What happens if my plans change and I need to cancel?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>We understand that plans can change. If you need to cancel a ride you've booked or offered, log in to your TripSync account and navigate to the ride details. Click on the "Cancel" button and provide a reason for cancellation. Please try to cancel as early as possible to give other users time to make alternative arrangements.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How does the rating system work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>After completing a trip, both drivers and passengers can rate each other on a scale of 1 to 5 stars and leave a review. These ratings and reviews help build trust within the community and allow users to make informed decisions about who they want to travel with. Your overall rating is an average of all the ratings you've received.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>How can I contact TripSync support?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>If you have any questions, concerns, or feedback about TripSync, you can reach our support team through the "Contact Us" page on our website. Fill out the contact form with your details and message, and our team will get back to you as soon as possible. We're here to help you have the best carpooling experience!</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Is TripSync environmentally friendly?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+
+                    <div class="accordion-content">
+                        <p>Absolutely! Carpooling is one of the most effective ways to reduce carbon emissions from transportation. By sharing rides, TripSync users are helping to reduce the number of vehicles on the road, which means less traffic congestion and reduced greenhouse gas emissions. It's a win-win for both the users and the environment!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/search">Find a Ride</a></li>
+                        <li><a href="/offer">Offer a Ride</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/offer.js"></script>
+    <script src="/static/js/profiles.js"></script>
+    <script src="/static/js/booking.js"></script>
+
+</body>
+</html>

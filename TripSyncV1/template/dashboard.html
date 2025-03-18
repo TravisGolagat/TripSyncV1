@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TripSync</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/template/index.html" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/search">Find Rides</a></li>
+                    <li><a href="/offer">Offer a Ride</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-auth">
+                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <!-- Main Content -->
+    <!-- Dashboard Page -->
+    <section class="dashboard-page">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="welcome-text">
+                    <h2>Welcome, kurt lopez!</h2>
+                    <p>Manage your rides and account from your personal dashboard.</p>
+                </div>
+
+                <a href="/offer" class="btn btn-primary">Offer a New Ride</a>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Rides Offered</div>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Rides Taken</div>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+            </div>
+
+            <div class="dashboard-tabs">
+                <div class="dashboard-tab active" data-tab="upcoming">Upcoming Rides</div>
+                <div class="dashboard-tab" data-tab="offered">My Offered Rides</div>
+                <div class="dashboard-tab" data-tab="history">Ride History</div>
+                <div class="dashboard-tab" data-tab="profile">Profile Settings</div>
+            </div>
+
+            <div class="dashboard-content">
+                <!-- Upcoming Rides Tab -->
+                <div class="tab-upcoming active" data-tab="upcoming">
+
+                    <div class="ride-list">
+
+
+                        <div class="card ride-card mb-3">
+                            <div class="ride-info">
+                                <div class="ride-route">
+                                    <h3>DLSU</h3>
+                                    <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <h3>MMCL</h3>
+                                </div>
+
+                                <div class="ride-details">
+                                    <div class="ride-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Mar 19, 2025</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>07:00</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>1 seat(s) booked</span>
+                                    </div>
+                                </div>
+
+                                <div class="ride-driver">
+                                    <img src="https://ui-avatars.com/api/?name=tester&amp;background=800000&amp;color=FFD700" alt="tester" class="ride-driver-photo">
+                                    <div>
+                                        <div class="ride-driver-name">tester</div>
+                                        <div class="ride-driver-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ride-price">
+                                <div class="ride-price-amount">₱3.0</div>
+                                <a href="/ride/1" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- My Offered Rides Tab -->
+                <div class="tab-offered" data-tab="offered">
+
+                    <div class="text-center py-5">
+                        <i class="fas fa-car fa-3x mb-3" style="color: var(--gray-color);"></i>
+                        <h3>No offered rides</h3>
+                        <p class="mb-4">You haven't offered any rides yet.</p>
+                        <a href="/offer" class="btn btn-primary">Offer a Ride</a>
+                    </div>
+
+                </div>
+
+                <!-- Ride History Tab -->
+                <div class="tab-history" data-tab="history">
+                    <!-- We'll handle past rides directly in the template -->
+                    <!-- Past Passenger Rides -->
+                    <!-- Past Driver Rides -->
+
+
+
+
+                    <div class="text-center py-5">
+                        <i class="fas fa-history fa-3x mb-3" style="color: var(--gray-color);"></i>
+                        <h3>No ride history yet</h3>
+                        <p>Your completed rides will appear here.</p>
+                    </div>
+
+                </div>
+
+                <!-- Profile Settings Tab -->
+                <div class="tab-profile" data-tab="profile">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-gradient-primary text-white py-3">
+                            <h3 class="mb-0"><i class="fas fa-user-circle me-2"></i>Profile Settings</h3>
+                            <p class="mb-0 mt-1 small">Update your personal information and preferences</p>
+                        </div>
+
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <!-- Left column with profile picture -->
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="profile-picture-container mb-3">
+                                        <img src="https://ui-avatars.com/api/?name=kurt+lopez&amp;background=800000&amp;color=FFD700" alt="kurt lopez" class="profile-picture shadow" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid white;">
+                                        <div class="profile-picture-overlay">
+                                            <button type="button" class="btn btn-light btn-sm rounded-circle shadow-sm" title="Change profile picture">
+                                                <i class="fas fa-camera"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="mb-1">kurt lopez</h4>
+                                    <p class="text-muted mb-3">University Student</p>
+
+                                    <div class="d-flex justify-content-center">
+                                        <div class="text-center me-3">
+                                            <h5>0</h5>
+                                            <small class="text-muted">Rides Offered</small>
+                                        </div>
+                                        <div class="text-center ms-3">
+                                            <h5>1</h5>
+                                            <small class="text-muted">Rides Taken</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right column with form -->
+                                <div class="col-md-8">
+                                    <form class="profile-form">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="profile-name" class="form-label fw-bold">
+                                                    <i class="fas fa-user text-primary me-1"></i> Full Name
+                                                </label>
+                                                <input type="text" class="form-control form-control-lg" id="profile-name" name="name" value="kurt lopez" placeholder="Your full name">
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label for="profile-email" class="form-label fw-bold">
+                                                    <i class="fas fa-envelope text-primary me-1"></i> Email Address
+                                                </label>
+                                                <input type="email" class="form-control form-control-lg bg-light" id="profile-email" name="email" value="kurtlopez@school.com" disabled>
+                                                <small class="text-muted">For security, email cannot be changed</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="profile-university" class="form-label fw-bold">
+                                                <i class="fas fa-university text-primary me-1"></i> University
+                                            </label>
+                                            <select class="form-select form-select-lg" id="profile-university" name="university">
+                                                <option value="MMCL">Mapua Malayan Colleges Laguna</option>
+                                                <option value="UP Diliman">University of the Philippines Diliman</option>
+                                                <option value="Ateneo de Manila University">Ateneo de Manila University</option>
+                                                <option value="De La Salle University">De La Salle University</option>
+                                                <option value="UST">University of Santo Tomas</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="profile-bio" class="form-label fw-bold">
+                                                <i class="fas fa-comment-alt text-primary me-1"></i> Bio
+                                            </label>
+                                            <textarea class="form-control" id="profile-bio" name="bio" rows="4" placeholder="Tell others about yourself...">Trusted member of the TripSync community. University student who enjoys sharing rides with others.</textarea>
+                                            <small class="text-muted">Share a little about yourself with the TripSync community</small>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label fw-bold">
+                                                <i class="fas fa-shield-alt text-primary me-1"></i> Privacy Settings
+                                            </label>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="show-phone" checked>
+                                                <label class="form-check-label" for="show-phone">
+                                                    Show my contact details to riders/drivers I'm matched with
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="receive-notifications" checked>
+                                                <label class="form-check-label" for="receive-notifications">
+                                                    Receive notifications about new ride matches
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save me-1"></i> Save Changes
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional settings card -->
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-light">
+                            <h4 class="mb-0"><i class="fas fa-cog me-2"></i>Account Settings</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h5 class="mb-1">Change Password</h5>
+                                    <p class="text-muted mb-0 small">Update your password regularly to keep your account secure</p>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-key me-1"></i> Change
+                                </button>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h5 class="mb-1">Verification Status</h5>
+                                    <p class="text-muted mb-0 small">Verify your account to build trust with other riders</p>
+                                </div>
+                                <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i> Verified</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="mb-1 text-danger">Delete Account</h5>
+                                    <p class="text-muted mb-0 small">Permanently remove your account and all associated data</p>
+                                </div>
+                                <button class="btn btn-outline-danger btn-sm">
+                                    <i class="fas fa-trash-alt me-1"></i> Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/search">Find a Ride</a></li>
+                        <li><a href="/offer">Offer a Ride</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/offer.js"></script>
+    <script src="/static/js/profiles.js"></script>
+    <script src="/static/js/booking.js"></script>
+
+</body>
+</html>

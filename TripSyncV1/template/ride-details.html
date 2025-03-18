@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Details - TripSync</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Ride Details Page -->
+    <section class="ride-details-page">
+        <div class="container">
+            <div class="ride-details-card">
+                <div class="ride-details-header">
+                    <div class="ride-route">
+                        <h3>Pickup Location</h3>
+                        <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
+                        <h3>Destination</h3>
+                    </div>
+
+                    <div class="ride-dates">
+                        <div class="ride-date">
+                            <div class="ride-date-label">Departure Date</div>
+                            <div class="ride-date-value">YYYY-MM-DD</div>
+                        </div>
+
+                        <div class="ride-date">
+                            <div class="ride-date-label">Departure Time</div>
+                            <div class="ride-date-value">HH:MM AM/PM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ride-details-body">
+                    <div class="ride-details-info">
+                        <div class="info-section">
+                            <h3>Trip Details</h3>
+
+                            <div class="ride-stops">
+                                <div class="ride-stop">
+                                    <h4>Pickup Location</h4>
+                                    <p>Pickup point</p>
+                                </div>
+
+                                <div class="ride-stop">
+                                    <h4>Destination</h4>
+                                    <p>Drop-off point</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Ride Amenities</h3>
+
+                            <div class="ride-amenities">
+                                <div class="ride-amenity">
+                                    <i class="fas fa-suitcase"></i>
+                                    <span>Luggage space</span>
+                                </div>
+
+                                <div class="ride-amenity">
+                                    <i class="fas fa-music"></i>
+                                    <span>Music</span>
+                                </div>
+
+                                <div class="ride-amenity">
+                                    <i class="fas fa-snowflake"></i>
+                                    <span>Air conditioning</span>
+                                </div>
+
+                                <div class="ride-amenity">
+                                    <i class="fas fa-charging-station"></i>
+                                    <span>USB charging</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ride-details-sidebar">
+                        <div class="driver-card">
+                            <img src="https://ui-avatars.com/api/?name=Driver&background=random" alt="Driver" class="driver-photo">
+                            <h4 class="driver-name">Driver Name</h4>
+                            <div class="driver-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                            <div class="driver-trips">25 trips</div>
+                            <a href="#" class="btn btn-outline btn-sm">View Profile</a>
+                        </div>
+
+                        <div class="booking-card">
+                            <div class="booking-price">$XX.XX</div>
+
+                            <div class="booking-details">
+                                <div class="booking-detail">
+                                    <span>Available seats</span>
+                                    <span>X/Y</span>
+                                </div>
+
+                                <div class="booking-detail">
+                                    <span>Price per seat</span>
+                                    <span>$XX.XX</span>
+                                </div>
+                            </div>
+
+                            <form class="booking-form">
+                                <button type="submit" class="btn btn-primary width-100">Book Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

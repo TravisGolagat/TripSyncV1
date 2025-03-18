@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Ride - TripSync</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/template/index.html" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/template/search.html">Find Rides</a></li>
+                    <li><a href="/template/offer.html">Offer a Ride</a></li>
+                    <li><a href="/template/faq.html">FAQ</a></li>
+                    <li><a href="/template/contact.html">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-auth">
+                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <!-- Main Content -->
+    <!-- Search Results Page -->
+    <section class="search-results">
+        <div class="container">
+            <div class="search-header">
+                <h2>Find a Ride</h2>
+                <a href="/template/offer.html" class="btn btn-primary">Offer a Ride</a>
+            </div>
+
+            <!-- Search Form -->
+            <div class="card mb-4">
+                <form class="search-form p-3">
+                    <div class="form-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" class="form-control" name="from" placeholder="Pickup Location">
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-map-marker"></i>
+                        <input type="text" class="form-control" name="to" placeholder="Destination">
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-calendar"></i>
+                        <input type="date" class="form-control" name="date">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+
+            <!-- Filters -->
+            <div class="search-filters">
+                <div class="filter" data-filter="morning">
+                    <i class="fas fa-sun"></i>
+                    <span>Morning</span>
+                </div>
+
+                <div class="filter" data-filter="afternoon">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span>Afternoon</span>
+                </div>
+
+                <div class="filter" data-filter="evening">
+                    <i class="fas fa-moon"></i>
+                    <span>Evening</span>
+                </div>
+
+                <div class="filter" data-filter="lowest-price">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Lowest Price</span>
+                </div>
+
+                <div class="filter" data-filter="highest-rated">
+                    <i class="fas fa-star"></i>
+                    <span>Highest Rated</span>
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="loading-indicator text-center py-5">
+                <span class="loader"></span>
+                <p class="mt-3">Searching for rides...</p>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results text-center py-5" style="display: none;">
+                <i class="fas fa-search fa-3x mb-3" style="color: var(--gray-color);"></i>
+                <h3>No rides found</h3>
+                <p class="mb-4">Try adjusting your search criteria or offer a ride instead.</p>
+                <a href="/offer" class="btn btn-primary">Offer a Ride</a>
+            </div>
+
+            <!-- Results List -->
+            <div class="ride-list" style="display: none;">
+                <!-- Ride cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/search">Find a Ride</a></li>
+                        <li><a href="/offer">Offer a Ride</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/offer.js"></script>
+    <script src="/static/js/profiles.js"></script>
+    <script src="/static/js/booking.js"></script>
+
+</body>
+</html>

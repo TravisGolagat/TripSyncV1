@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripSync - Philippine University Carpooling in Laguna</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/template/index.html" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/template/index.html">Home</a></li>
+                    <li><a href="/template/search.html">Find Rides</a></li>
+                    <li><a href="/template/offer-ride.html">Offer a Ride</a></li>
+                    <li><a href="/template/faq.html">FAQ</a></li>
+                    <li><a href="/template/contact.html">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-auth">
+                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <!-- Main Content -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Student Carpooling in Laguna, Philippines</h1>
+                <p>Connect with students from MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU for affordable, convenient rides.</p>
+
+                <div class="hero-buttons">
+                    <a href="/template/search.html" class="btn btn-primary btn-lg">Find a Ride</a>
+                    <a href="/template/offer.html" class="btn btn-outline btn-lg">Offer a Ride</a>
+                </div>
+
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="form-group">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" class="form-control" name="from" placeholder="Pickup Location">
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fas fa-map-marker"></i>
+                            <input type="text" class="form-control" name="to" placeholder="Destination">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary search-btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose TripSync?</h2>
+                <p>Our platform offers everything you need for safe and convenient student carpooling</p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Verified Users</h3>
+                    <p>All drivers and passengers on our platform are verified university students, ensuring a safe community.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Affordable Prices</h3>
+                    <p>Save money on travel costs with budget-friendly rides specifically for students.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Reduce your carbon footprint by sharing rides instead of traveling alone.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Building</h3>
+                    <p>Connect with fellow students from your university or others along your route.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How TripSync Works</h2>
+                <p>Getting started with carpooling is easy with our simple three-step process</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create an Account</h3>
+                    <p>Sign up using your university email and complete your profile to join our community.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Find or Offer a Ride</h3>
+                    <p>Search for available trips or offer a ride if you're driving between campuses or cities.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Enjoy Your Trip</h3>
+                    <p>Connect with your driver or passengers, travel together, and share the costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied students using TripSync for their travel needs</p>
+            </div>
+
+            <div class="testimonial-container">
+                <div class="card testimonial">
+                    <img src="https://ui-avatars.com/api/?name=Maria+Reyes&background=800000&color=FFD700" alt="Maria Reyes" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p>TripSync has been a life-saver for my weekend trips home from campus. I've met amazing people and saved so much money on travel!</p>
+                    </div>
+                    <div class="testimonial-author">Maria Reyes</div>
+                    <div class="testimonial-role">MMCL Student, Laguna</div>
+                </div>
+
+                <div class="card testimonial">
+                    <img src="https://ui-avatars.com/api/?name=Miguel+Santos&background=7B1113&color=FFFFFF" alt="Miguel Santos" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p>As a driver, I love being able to offset my gas costs while helping fellow students get where they need to go. The platform is super easy to use!</p>
+                    </div>
+                    <div class="testimonial-author">Miguel Santos</div>
+                    <div class="testimonial-role">UP Diliman</div>
+                </div>
+
+                <div class="card testimonial">
+                    <img src="https://ui-avatars.com/api/?name=Jasmine+Cruz&background=00008B&color=FFFFFF" alt="Jasmine Cruz" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p>I was skeptical at first, but TripSync has made my commute between Ateneo and MMCL so much more affordable and enjoyable. Highly recommend!</p>
+                    </div>
+                    <div class="testimonial-author">Jasmine Cruz</div>
+                    <div class="testimonial-role">Ateneo de Manila University</div>
+                </div>
+
+                <div class="card testimonial">
+                    <img src="https://ui-avatars.com/api/?name=Carlos+Mendoza&background=006633&color=FFFFFF" alt="Carlos Mendoza" class="testimonial-avatar">
+                    <div class="testimonial-content">
+                        <p>The verification system makes me feel safe knowing I'm traveling with other students. Perfect for my trips between DLSU and Laguna!</p>
+                    </div>
+                    <div class="testimonial-author">Carlos Mendoza</div>
+                    <div class="testimonial-role">De La Salle University</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Journey in Laguna?</h2>
+            <p>Join students from MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU using TripSync for affordable and convenient travel. Our platform makes it easy to connect riders and passengers across Philippine universities.</p>
+
+            <div class="cta-buttons">
+                <a href="/template/auth.html" class="btn btn-primary btn-lg">Sign Up Now</a>
+                <a href="/template/search.html" class="btn btn-outline btn-lg">Browse Available Rides</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/template/index.html" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/template/index.html">Home</a></li>
+                        <li><a href="/template/search.html">Find a Ride</a></li>
+                        <li><a href="/template/offer.html">Offer a Ride</a></li>
+                        <li><a href="/template/dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/template/faq.html">FAQ</a></li>
+                        <li><a href="/template/contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/offer.js"></script>
+    <script src="/static/js/profiles.js"></script>
+    <script src="/static/js/booking.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Details</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <section class="page-header">
+        <div class="container">
+            <h1>Ride Details</h1>
+            <p>Review all information about this ride before booking.</p>
+        </div>
+    </section>
+
+    <section class="ride-details-section">
+        <div class="container">
+            <div class="ride-details-container">
+                <div class="ride-overview">
+                    <div class="route-map">
+                        <div class="map-placeholder">
+                            <div class="route-points">
+                                <div class="route-point">
+                                    <div class="point-marker start-point">A</div>
+                                    <div class="point-label">Pickup Location</div>
+                                </div>
+                                <div class="route-line"></div>
+                                <div class="route-point">
+                                    <div class="point-marker end-point">B</div>
+                                    <div class="point-label">Destination</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ride-summary">
+                        <div class="ride-locations">
+                            <h2><span class="pickup">Pickup Location</span> → <span class="destination">Destination</span></h2>
+                        </div>
+                        <div class="ride-time">
+                            <div class="ride-date">
+                                <i class="fas fa-calendar"></i> Departure Date
+                            </div>
+                            <div class="ride-hour">
+                                <i class="fas fa-clock"></i> Departure Time
+                            </div>
+                        </div>
+                        <div class="ride-info">
+                            <div class="info-item">
+                                <i class="fas fa-user-friends"></i> X seats available
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-car"></i> Car Model
+                            </div>
+                        </div>
+                        <div class="ride-price">
+                            <span class="price-label">Price per seat</span>
+                            <span class="price-amount">$XX.XX</span>
+                        </div>
+                        <div class="booking-action">
+                            <button class="btn btn-primary btn-lg">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ride-details-info">
+                    <div class="driver-profile">
+                        <h3>About the Driver</h3>
+                        <div class="driver-info">
+                            <div class="driver-avatar">
+                                <img src="driver.jpg" alt="Driver Name">
+                            </div>
+                            <div class="driver-details">
+                                <h4>Driver Name</h4>
+                                <div class="driver-meta">
+                                    <div class="driver-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>X.X (X reviews)</span>
+                                    </div>
+                                    <div class="driver-university">
+                                        <i class="fas fa-university"></i>
+                                        <span>University Name</span>
+                                    </div>
+                                </div>
+                                <div class="driver-verification">
+                                    <i class="fas fa-check-circle"></i> Verified Student
+                                </div>
+                                <a href="#" class="btn btn-outline">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ride-details-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-btn active">Trip Details</button>
+                            <button class="tab-btn">Passengers</button>
+                            <button class="tab-btn">Driver Reviews</button>
+                        </div>
+
+                        <div class="tabs-content">
+                            <div class="tab-panel active">
+                                <h5>Route</h5>
+                                <p>Pickup Location → Destination</p>
+                            </div>
+
+                            <div class="tab-panel">
+                                <h5>No passengers have booked this ride yet.</h5>
+                            </div>
+
+                            <div class="tab-panel">
+                                <h5>This driver has no reviews yet.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

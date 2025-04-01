@@ -16,8 +16,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-
-
 </head>
 <body>
     <!-- Header -->
@@ -41,22 +39,36 @@
                     <li><a href="/template/contact.html">Contact Us</a></li>
                 </ul>
 
-                <div class="nav-auth">
-                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
-                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                <div class="nav-links">
+                    <a href="/template/login.html" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/template/signup.html" class="btn btn-sm btn-primary">Sign Up</a>
+                </div>
+
+                <div class="nav-user">
+                    <a href="/template/dashboard.html" class="user-avatar">
+                        <img src="https://ui-avatars.com/api/?name=John+Smith&background=800000&color=FFD700" alt="John Smith">
+                    </a>
+                    <div class="user-dropdown">
+                        <a href="/template/dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="/template/profile.html"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- Flash Messages -->
-    <!-- Main Content -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
     <!-- Dashboard Page -->
     <section class="dashboard-page">
         <div class="container">
             <div class="dashboard-header">
                 <div class="welcome-text">
-                    <h2>Welcome, kurt lopez!</h2>
+                    <h2>Welcome, John Smith!</h2>
                     <p>Manage your rides and account from your personal dashboard.</p>
                 </div>
 
@@ -68,7 +80,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-car"></i>
                     </div>
-                    <div class="stat-value">0</div>
+                    <div class="stat-value">5</div>
                     <div class="stat-label">Rides Offered</div>
                 </div>
 
@@ -76,7 +88,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-user"></i>
                     </div>
-                    <div class="stat-value">0</div>
+                    <div class="stat-value">3</div>
                     <div class="stat-label">Rides Taken</div>
                 </div>
 
@@ -84,7 +96,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="stat-value">0</div>
+                    <div class="stat-value">4.8</div>
                     <div class="stat-label">Average Rating</div>
                 </div>
 
@@ -92,7 +104,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="stat-value">0</div>
+                    <div class="stat-value">7</div>
                     <div class="stat-label">Reviews</div>
                 </div>
             </div>
@@ -107,27 +119,24 @@
             <div class="dashboard-content">
                 <!-- Upcoming Rides Tab -->
                 <div class="tab-upcoming active" data-tab="upcoming">
-
                     <div class="ride-list">
-
-
                         <div class="card ride-card mb-3">
                             <div class="ride-info">
                                 <div class="ride-route">
-                                    <h3>DLSU</h3>
+                                    <h3>MMCL Main Campus</h3>
                                     <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
-                                    <h3>MMCL</h3>
+                                    <h3>Ateneo de Manila University</h3>
                                 </div>
 
                                 <div class="ride-details">
                                     <div class="ride-detail">
                                         <i class="fas fa-calendar"></i>
-                                        <span>Mar 19, 2025</span>
+                                        <span>Apr 15, 2025</span>
                                     </div>
 
                                     <div class="ride-detail">
                                         <i class="fas fa-clock"></i>
-                                        <span>07:00</span>
+                                        <span>08:00</span>
                                     </div>
 
                                     <div class="ride-detail">
@@ -137,205 +146,227 @@
                                 </div>
 
                                 <div class="ride-driver">
-                                    <img src="https://ui-avatars.com/api/?name=tester&amp;background=800000&amp;color=FFD700" alt="tester" class="ride-driver-photo">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=00008B&color=FFFFFF" alt="Sarah Johnson" class="ride-driver-photo">
                                     <div>
-                                        <div class="ride-driver-name">tester</div>
+                                        <div class="ride-driver-name">Sarah Johnson</div>
                                         <div class="ride-driver-rating">
                                             <i class="fas fa-star"></i>
-                                            <span>0</span>
+                                            <span>4.9</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="ride-price">
-                                <div class="ride-price-amount">₱3.0</div>
-                                <a href="/ride/1" class="btn btn-primary">View Details</a>
+                                <div class="ride-price-amount">₱300</div>
+                                <a href="/template/ride-details.html?id=2" class="btn btn-primary">View Details</a>
                             </div>
                         </div>
-
-
                     </div>
-
                 </div>
 
                 <!-- My Offered Rides Tab -->
                 <div class="tab-offered" data-tab="offered">
+                    <div class="ride-list">
+                        <div class="card ride-card mb-3">
+                            <div class="ride-info">
+                                <div class="ride-route">
+                                    <h3>MMCL Main Campus</h3>
+                                    <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <h3>UP Diliman</h3>
+                                </div>
 
-                    <div class="text-center py-5">
-                        <i class="fas fa-car fa-3x mb-3" style="color: var(--gray-color);"></i>
-                        <h3>No offered rides</h3>
-                        <p class="mb-4">You haven't offered any rides yet.</p>
-                        <a href="/template/offer.html" class="btn btn-primary">Offer a Ride</a>
+                                <div class="ride-details">
+                                    <div class="ride-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Apr 10, 2025</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>09:30</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>2/3 seats available</span>
+                                    </div>
+                                </div>
+
+                                <div class="badge badge-success">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Active</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-price">
+                                <div class="ride-price-amount">₱275</div>
+                                <a href="/template/ride-details.html?id=3" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
                 <!-- Ride History Tab -->
                 <div class="tab-history" data-tab="history">
-                    <!-- We'll handle past rides directly in the template -->
                     <!-- Past Passenger Rides -->
-                    <!-- Past Driver Rides -->
+                    <h3 class="mb-3">Rides as Passenger</h3>
+                    <div class="ride-list mb-5">
+                        <div class="card ride-card mb-3">
+                            <div class="ride-info">
+                                <div class="ride-route">
+                                    <h3>Ateneo de Manila University</h3>
+                                    <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <h3>MMCL Main Campus</h3>
+                                </div>
 
+                                <div class="ride-details">
+                                    <div class="ride-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Mar 15, 2025</span>
+                                    </div>
 
+                                    <div class="ride-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>16:00</span>
+                                    </div>
 
+                                    <div class="ride-detail">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>1 seat(s) booked</span>
+                                    </div>
+                                </div>
 
-                    <div class="text-center py-5">
-                        <i class="fas fa-history fa-3x mb-3" style="color: var(--gray-color);"></i>
-                        <h3>No ride history yet</h3>
-                        <p>Your completed rides will appear here.</p>
+                                <div class="badge badge-secondary">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Completed</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-price">
+                                <div class="ride-price-amount">₱280</div>
+                                <a href="/template/ride-details.html?id=4" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Past Driver Rides -->
+                    <h3 class="mb-3">Rides as Driver</h3>
+                    <div class="ride-list">
+                        <div class="card ride-card mb-3">
+                            <div class="ride-info">
+                                <div class="ride-route">
+                                    <h3>MMCL Main Campus</h3>
+                                    <span class="ride-route-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <h3>De La Salle University</h3>
+                                </div>
+
+                                <div class="ride-details">
+                                    <div class="ride-detail">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Mar 05, 2025</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-clock"></i>
+                                        <span>07:30</span>
+                                    </div>
+
+                                    <div class="ride-detail">
+                                        <i class="fas fa-user-friends"></i>
+                                        <span>3/3 seats taken</span>
+                                    </div>
+                                </div>
+
+                                <div class="badge badge-secondary">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Completed</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-price">
+                                <div class="ride-price-amount">₱350</div>
+                                <a href="/template/ride-details.html?id=5" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Profile Settings Tab -->
                 <div class="tab-profile" data-tab="profile">
-                    <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-header bg-gradient-primary text-white py-3">
-                            <h3 class="mb-0"><i class="fas fa-user-circle me-2"></i>Profile Settings</h3>
-                            <p class="mb-0 mt-1 small">Update your personal information and preferences</p>
-                        </div>
-
-                        <div class="card-body p-4">
-                            <div class="row">
-                                <!-- Left column with profile picture -->
-                                <div class="col-md-4 text-center mb-4 mb-md-0">
-                                    <div class="profile-picture-container mb-3">
-                                        <img src="https://ui-avatars.com/api/?name=kurt+lopez&amp;background=800000&amp;color=FFD700" alt="kurt lopez" class="profile-picture shadow" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid white;">
-                                        <div class="profile-picture-overlay">
-                                            <button type="button" class="btn btn-light btn-sm rounded-circle shadow-sm" title="Change profile picture">
-                                                <i class="fas fa-camera"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <h4 class="mb-1">kurt lopez</h4>
-                                    <p class="text-muted mb-3">University Student</p>
-
-                                    <div class="d-flex justify-content-center">
-                                        <div class="text-center me-3">
-                                            <h5>0</h5>
-                                            <small class="text-muted">Rides Offered</small>
-                                        </div>
-                                        <div class="text-center ms-3">
-                                            <h5>1</h5>
-                                            <small class="text-muted">Rides Taken</small>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Right column with form -->
-                                <div class="col-md-8">
-                                    <form class="profile-form">
-                                        <div class="row">
-                                            <div class="col-md-6 mb-3">
-                                                <label for="profile-name" class="form-label fw-bold">
-                                                    <i class="fas fa-user text-primary me-1"></i> Full Name
-                                                </label>
-                                                <input type="text" class="form-control form-control-lg" id="profile-name" name="name" value="kurt lopez" placeholder="Your full name">
-                                            </div>
-
-                                            <div class="col-md-6 mb-3">
-                                                <label for="profile-email" class="form-label fw-bold">
-                                                    <i class="fas fa-envelope text-primary me-1"></i> Email Address
-                                                </label>
-                                                <input type="email" class="form-control form-control-lg bg-light" id="profile-email" name="email" value="kurtlopez@school.com" disabled>
-                                                <small class="text-muted">For security, email cannot be changed</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="profile-university" class="form-label fw-bold">
-                                                <i class="fas fa-university text-primary me-1"></i> University
-                                            </label>
-                                            <select class="form-select form-select-lg" id="profile-university" name="university">
-                                                <option value="MMCL">Mapua Malayan Colleges Laguna</option>
-                                                <option value="UP Diliman">University of the Philippines Diliman</option>
-                                                <option value="Ateneo de Manila University">Ateneo de Manila University</option>
-                                                <option value="De La Salle University">De La Salle University</option>
-                                                <option value="UST">University of Santo Tomas</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="profile-bio" class="form-label fw-bold">
-                                                <i class="fas fa-comment-alt text-primary me-1"></i> Bio
-                                            </label>
-                                            <textarea class="form-control" id="profile-bio" name="bio" rows="4" placeholder="Tell others about yourself...">Trusted member of the TripSync community. University student who enjoys sharing rides with others.</textarea>
-                                            <small class="text-muted">Share a little about yourself with the TripSync community</small>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label class="form-label fw-bold">
-                                                <i class="fas fa-shield-alt text-primary me-1"></i> Privacy Settings
-                                            </label>
-                                            <div class="form-check mb-2">
-                                                <input class="form-check-input" type="checkbox" id="show-phone" checked>
-                                                <label class="form-check-label" for="show-phone">
-                                                    Show my contact details to riders/drivers I'm matched with
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="receive-notifications" checked>
-                                                <label class="form-check-label" for="receive-notifications">
-                                                    Receive notifications about new ride matches
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
-                                            <button type="reset" class="btn btn-outline-secondary">Cancel</button>
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="fas fa-save me-1"></i> Save Changes
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional settings card -->
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-header bg-light">
-                            <h4 class="mb-0"><i class="fas fa-cog me-2"></i>Account Settings</h4>
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div>
-                                    <h5 class="mb-1">Change Password</h5>
-                                    <p class="text-muted mb-0 small">Update your password regularly to keep your account secure</p>
-                                </div>
-                                <button class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-key me-1"></i> Change
+                    <div class="profile-settings">
+                        <div class="profile-section">
+                            <div class="profile-photo-container">
+                                <img src="https://ui-avatars.com/api/?name=John+Smith&background=800000&color=FFD700" alt="John Smith" class="profile-photo">
+                                <button class="btn btn-sm btn-outline profile-photo-btn">
+                                    <i class="fas fa-camera"></i> Change
                                 </button>
                             </div>
-                            <hr>
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div>
-                                    <h5 class="mb-1">Verification Status</h5>
-                                    <p class="text-muted mb-0 small">Verify your account to build trust with other riders</p>
-                                </div>
-                                <span class="badge bg-success"><i class="fas fa-check-circle me-1"></i> Verified</span>
+
+                            <div class="profile-info">
+                                <form class="profile-form">
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label for="profile-name">Full Name</label>
+                                            <input type="text" class="form-control" id="profile-name" value="John Smith">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="profile-email">Email</label>
+                                            <input type="email" class="form-control" id="profile-email" value="john@mmcl.edu.ph" disabled>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="profile-university">University</label>
+                                            <input type="text" class="form-control" id="profile-university" value="MMCL">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="profile-phone">Phone Number</label>
+                                            <input type="tel" class="form-control" id="profile-phone" value="+639123456789">
+                                        </div>
+
+                                        <div class="form-group full-width">
+                                            <label for="profile-bio">Bio</label>
+                                            <textarea class="form-control" id="profile-bio" rows="3">Computer Science student at MMCL. I commute regularly between Laguna and Metro Manila.</textarea>
+                                        </div>
+
+                                        <div class="form-group full-width">
+                                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                            <hr>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h5 class="mb-1 text-danger">Delete Account</h5>
-                                    <p class="text-muted mb-0 small">Permanently remove your account and all associated data</p>
+                        </div>
+
+                        <div class="profile-section">
+                            <h3>Change Password</h3>
+                            <form class="password-form">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" class="form-control" id="current-password">
                                 </div>
-                                <button class="btn btn-outline-danger btn-sm">
-                                    <i class="fas fa-trash-alt me-1"></i> Delete
-                                </button>
-                            </div>
+
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" class="form-control" id="new-password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm New Password</label>
+                                    <input type="password" class="form-control" id="confirm-password">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -397,11 +428,50 @@
 
     <!-- JavaScript -->
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/auth.js"></script>
-    <script src="/static/js/search.js"></script>
-    <script src="/static/js/offer.js"></script>
     <script src="/static/js/profiles.js"></script>
-    <script src="/static/js/booking.js"></script>
 
+    <script>
+        // Dashboard tab functionality for static HTML version
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tab switching
+            document.querySelectorAll('.dashboard-tab').forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const tabType = this.getAttribute('data-tab');
+
+                    // Remove active class from all tabs and content
+                    document.querySelectorAll('.dashboard-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('[data-tab]').forEach(content => {
+                        if (content.classList.contains('tab-' + tabType)) {
+                            content.classList.add('active');
+                        } else if (content.classList.contains('tab-' + tabType.replace('-', ''))) {
+                            content.classList.add('active');
+                        } else if (content.classList.contains('dashboard-tab')) {
+                            // Skip tabs themselves
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+
+                    // Add active class to current tab
+                    this.classList.add('active');
+                });
+            });
+
+            // Simulate form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    alert('Form submission is simulated in this static HTML version.');
+                });
+            });
+
+            // Logout functionality
+            document.getElementById('logout-link').addEventListener('click', function (e) {
+                e.preventDefault();
+                alert('Logout is simulated in this static HTML version.');
+                window.location.href = '/template/index.html';
+            });
+        });
+    </script>
 </body>
 </html>

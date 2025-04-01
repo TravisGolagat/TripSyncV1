@@ -16,8 +16,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-
-
 </head>
 <body>
     <!-- Header -->
@@ -41,20 +39,23 @@
                     <li><a href="/template/contact.html">Contact Us</a></li>
                 </ul>
 
-                <div class="nav-auth">
-                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
-                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                <div class="nav-links">
+                    <a href="/template/login.html" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/template/signup.html" class="btn btn-sm btn-primary">Sign Up</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- Flash Messages -->
-    <!-- Main Content -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
     <!-- Offer Ride Page -->
     <section class="offer-ride">
         <div class="container">
-            <div class="offer-ride-card">
+            <div class="card offer-ride-card">
                 <h2>Offer a Ride</h2>
 
                 <form class="offer-form">
@@ -88,13 +89,13 @@
                             <label for="price">Price per Seat</label>
                             <div class="input-group">
                                 <input type="number" class="form-control" id="price" name="price" min="1" step="0.01" placeholder="0.00">
-                                <div class="input-group-append">USD</div>
+                                <div class="input-group-append">₱</div>
                             </div>
                         </div>
 
                         <div class="form-group full-width">
-                            <label for="notes">Additional Notes (Optional)</label>
-                            <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Add any details about your ride, like meeting point, luggage space, etc."></textarea>
+                            <label for="description">Additional Notes (Optional)</label>
+                            <textarea class="form-control" id="description" name="description" rows="3" placeholder="Add any details about your ride, like meeting point, luggage space, etc."></textarea>
                         </div>
 
                         <div class="form-group full-width">
@@ -105,7 +106,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -132,10 +132,10 @@
                 <div>
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="/template/index.html">Home</a></li>
-                        <li><a href="/template/search.html">Find a Ride</a></li>
-                        <li><a href="/template/offer.html">Offer a Ride</a></li>
-                        <li><a href="/template/dashboard.html">Dashboard</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="search.html">Find a Ride</a></li>
+                        <li><a href="offer.html">Offer a Ride</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
                     </ul>
                 </div>
 
@@ -167,11 +167,24 @@
 
     <!-- JavaScript -->
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/auth.js"></script>
-    <script src="/static/js/search.js"></script>
     <script src="/static/js/offer.js"></script>
-    <script src="/static/js/profiles.js"></script>
-    <script src="/static/js/booking.js"></script>
 
+    <script>
+        // For static HTML demo
+        document.querySelector('.offer-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('In this static HTML version, the form submission is simulated. This would normally post to an API.');
+
+            // Simulate success message
+            const flashDiv = document.getElementById('flash-messages');
+            flashDiv.innerHTML = '<div class="flash-message flash-success">Your ride has been successfully posted!</div>';
+
+            // Clear form
+            this.reset();
+
+            // Scroll to top to see message
+            window.scrollTo(0, 0);
+        });
+    </script>
 </body>
 </html>

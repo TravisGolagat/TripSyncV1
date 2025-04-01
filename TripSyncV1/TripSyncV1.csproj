@@ -82,17 +82,13 @@
     <Content Include="template\404.html" />
     <Content Include="template\500.html" />
     <Content Include="template\auth.html" />
-    <Content Include="template\base.html" />
     <Content Include="template\contact.html" />
     <Content Include="template\dashboard.html" />
     <Content Include="template\faq.html" />
     <Content Include="template\index.html" />
-    <Content Include="template\layout.html" />
     <Content Include="template\login.html" />
     <Content Include="template\offer-ride.html" />
-    <Content Include="template\offer.html" />
     <Content Include="template\profile.html" />
-    <Content Include="template\ride-details.html" />
     <Content Include="template\ride_details.html" />
     <Content Include="template\search.html" />
     <Content Include="template\signup.html" />

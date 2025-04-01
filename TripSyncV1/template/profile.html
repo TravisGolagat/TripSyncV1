@@ -3,50 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - TripSync</title>
+    <title>Miguel Santos - TripSync</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/responsive.css">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/template/index.html" class="logo">
+                    <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                    TripSync
+                </a>
+
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="/template/index.html">Home</a></li>
+                    <li><a href="/template/search.html">Find Rides</a></li>
+                    <li><a href="/template/offer.html">Offer a Ride</a></li>
+                    <li><a href="/template/faq.html">FAQ</a></li>
+                    <li><a href="/template/contact.html">Contact Us</a></li>
+                </ul>
+
+                <div class="nav-links">
+                    <a href="/template/dashboard.html" class="btn btn-sm btn-outline">Dashboard</a>
+                    <a href="/template/index.html" class="btn btn-sm btn-primary logout-btn">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Flash Messages -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
+    <!-- Profile Page -->
     <section class="profile-page">
         <div class="container">
             <div class="profile-header">
-                <img src="user-profile.jpg" alt="User Name" class="profile-photo">
+                <img src="https://ui-avatars.com/api/?name=Miguel+Santos&background=8B0000&color=fff" alt="Miguel Santos" class="profile-photo">
+
                 <div>
-                    <h2 class="profile-name">User Name</h2>
+                    <h2 class="profile-name">Miguel Santos</h2>
+
                     <div class="profile-info">
                         <div class="profile-stat">
                             <i class="fas fa-car"></i>
-                            <span>10 trips as driver</span>
+                            <span>12 trips as driver</span>
                         </div>
+
                         <div class="profile-stat">
                             <i class="fas fa-user"></i>
-                            <span>5 trips as passenger</span>
+                            <span>8 trips as passenger</span>
                         </div>
+
                         <div class="profile-stat">
                             <i class="fas fa-star"></i>
                             <span>4.8 rating</span>
                         </div>
                     </div>
+
                     <p class="profile-bio">
-                        Trusted member of the TripSync community. University student who enjoys sharing rides with others.
+                        I'm a Computer Science student at MMCL who commutes from Calamba to campus daily. I enjoy sharing rides to help fellow students and reduce traffic congestion.
                     </p>
-                    <button class="btn btn-primary mt-3" data-modal="rating-modal">Rate User</button>
+
+                    <button class="btn btn-primary mt-3" data-modal="rating-modal">Rate Miguel</button>
                 </div>
             </div>
+
             <div class="profile-tabs">
                 <div class="profile-tab active" data-tab="reviews">Reviews</div>
                 <div class="profile-tab" data-tab="trips">Trips</div>
             </div>
+
             <div class="profile-content" data-tab="reviews" style="display: block;">
                 <div class="reviews-container">
                     <div class="card review-card">
                         <div class="review-header">
-                            <img src="reviewer-avatar.jpg" alt="Reviewer Name" class="reviewer-photo">
+                            <img src="https://ui-avatars.com/api/?name=Ana+Reyes&background=random" alt="Ana Reyes" class="reviewer-photo">
+
                             <div class="reviewer-info">
-                                <div class="reviewer-name">Reviewer Name</div>
-                                <div class="review-date">June 2023</div>
+                                <div class="reviewer-name">Ana Reyes</div>
+                                <div class="review-date">March 2025</div>
                             </div>
+
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="review-content">
+                            <p>Miguel is an excellent driver and very punctual. He made sure everyone was comfortable during the trip and drove safely. Highly recommend!</p>
+                        </div>
+                    </div>
+
+                    <div class="card review-card">
+                        <div class="review-header">
+                            <img src="https://ui-avatars.com/api/?name=Carlo+Manalo&background=random" alt="Carlo Manalo" class="reviewer-photo">
+
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Carlo Manalo</div>
+                                <div class="review-date">February 2025</div>
+                            </div>
+
                             <div class="review-rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -55,52 +133,328 @@
                                 <i class="far fa-star"></i>
                             </div>
                         </div>
+
                         <div class="review-content">
-                            <p>Great experience, very friendly driver!</p>
+                            <p>Great conversation during the trip. Miguel is knowledgeable about the best routes to avoid traffic. The car was clean and comfortable.</p>
+                        </div>
+                    </div>
+
+                    <div class="card review-card">
+                        <div class="review-header">
+                            <img src="https://ui-avatars.com/api/?name=Sofia+Mendoza&background=random" alt="Sofia Mendoza" class="reviewer-photo">
+
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Sofia Mendoza</div>
+                                <div class="review-date">January 2025</div>
+                            </div>
+
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="review-content">
+                            <p>Very reliable driver. Miguel was on time and communicated well before pickup. He's friendly and made the commute enjoyable for everyone. Will definitely ride with him again!</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="profile-content" data-tab="trips" style="display: none;">
-                <div class="text-center py-5">
-                    <i class="fas fa-car fa-3x mb-3"></i>
-                    <h3>Trip history</h3>
-                    <p>Recent trips will appear here.</p>
+                <div class="trips-container">
+                    <div class="card ride-card">
+                        <div class="ride-details">
+                            <div class="ride-route">
+                                <div class="route-point">
+                                    <i class="fas fa-circle-dot"></i>
+                                    <span>Calamba City</span>
+                                </div>
+                                <div class="route-divider"></div>
+                                <div class="route-point">
+                                    <i class="fas fa-location-dot"></i>
+                                    <span>MMCL Campus</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-meta">
+                                <div class="ride-date">
+                                    <i class="far fa-calendar"></i>
+                                    <span>March 28, 2025</span>
+                                </div>
+                                <div class="ride-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>7:30 AM</span>
+                                </div>
+                                <div class="ride-price">
+                                    <i class="fas fa-peso-sign"></i>
+                                    <span>₱80 per seat</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-status completed">Completed</div>
+                        </div>
+                    </div>
+
+                    <div class="card ride-card">
+                        <div class="ride-details">
+                            <div class="ride-route">
+                                <div class="route-point">
+                                    <i class="fas fa-circle-dot"></i>
+                                    <span>MMCL Campus</span>
+                                </div>
+                                <div class="route-divider"></div>
+                                <div class="route-point">
+                                    <i class="fas fa-location-dot"></i>
+                                    <span>SM Calamba</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-meta">
+                                <div class="ride-date">
+                                    <i class="far fa-calendar"></i>
+                                    <span>March 25, 2025</span>
+                                </div>
+                                <div class="ride-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>5:00 PM</span>
+                                </div>
+                                <div class="ride-price">
+                                    <i class="fas fa-peso-sign"></i>
+                                    <span>₱75 per seat</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-status completed">Completed</div>
+                        </div>
+                    </div>
+
+                    <div class="card ride-card">
+                        <div class="ride-details">
+                            <div class="ride-route">
+                                <div class="route-point">
+                                    <i class="fas fa-circle-dot"></i>
+                                    <span>Calamba City</span>
+                                </div>
+                                <div class="route-divider"></div>
+                                <div class="route-point">
+                                    <i class="fas fa-location-dot"></i>
+                                    <span>MMCL Campus</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-meta">
+                                <div class="ride-date">
+                                    <i class="far fa-calendar"></i>
+                                    <span>March 22, 2025</span>
+                                </div>
+                                <div class="ride-time">
+                                    <i class="far fa-clock"></i>
+                                    <span>7:30 AM</span>
+                                </div>
+                                <div class="ride-price">
+                                    <i class="fas fa-peso-sign"></i>
+                                    <span>₱80 per seat</span>
+                                </div>
+                            </div>
+
+                            <div class="ride-status completed">Completed</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Rating Modal -->
     <div class="modal-overlay" id="rating-modal">
         <div class="modal">
             <div class="modal-header">
-                <h3>Rate User</h3>
+                <h3>Rate Miguel Santos</h3>
                 <button class="modal-close">&times;</button>
             </div>
+
             <div class="modal-body">
-                <form class="rating-form">
+                <form class="rating-form" data-user-id="1">
                     <div class="form-group">
                         <label>Your Rating</label>
                         <div class="star-input">
                             <input type="radio" name="rating-radio" id="star-5" value="5">
                             <label for="star-5"><i class="fas fa-star"></i></label>
+
                             <input type="radio" name="rating-radio" id="star-4" value="4">
                             <label for="star-4"><i class="fas fa-star"></i></label>
+
                             <input type="radio" name="rating-radio" id="star-3" value="3">
                             <label for="star-3"><i class="fas fa-star"></i></label>
+
                             <input type="radio" name="rating-radio" id="star-2" value="2">
                             <label for="star-2"><i class="fas fa-star"></i></label>
+
                             <input type="radio" name="rating-radio" id="star-1" value="1">
                             <label for="star-1"><i class="fas fa-star"></i></label>
                         </div>
+                        <input type="hidden" name="rating" value="">
                     </div>
+
                     <div class="form-group">
                         <label for="comment">Your Review</label>
-                        <textarea class="form-control" id="comment" rows="4" placeholder="Write your experience..."></textarea>
+                        <textarea class="form-control" name="comment" id="comment" rows="4" placeholder="Write your experience with this user..."></textarea>
                     </div>
+
                     <button type="submit" class="btn btn-primary width-100">Submit Review</button>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="/template/index.html" class="footer-logo">
+                        <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
+                        TripSync
+                    </a>
+
+                    <p class="footer-about">
+                        TripSync is a trusted carpooling platform for Philippine university students in Laguna, connecting MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU students for affordable and eco-friendly travel.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/template/index.html">Home</a></li>
+                        <li><a href="/template/search.html">Find a Ride</a></li>
+                        <li><a href="/template/offer.html">Offer a Ride</a></li>
+                        <li><a href="/template/dashboard.html">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="/template/faq.html">FAQ</a></li>
+                        <li><a href="/template/contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@tripsync.ph">info@tripsync.ph</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+639123456789">+63 912 345 6789</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Laguna, Philippines</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TripSync Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../static/js/main.js"></script>
+
+    <script>
+        // Initialize tabs for static HTML
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.profile-tab');
+            const contentSections = document.querySelectorAll('.profile-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const tabName = this.getAttribute('data-tab');
+
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show corresponding content
+                    contentSections.forEach(content => {
+                        if (content.getAttribute('data-tab') === tabName) {
+                            content.style.display = 'block';
+                        } else {
+                            content.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize modal for static HTML
+            const modalOverlay = document.getElementById('rating-modal');
+            const modalBtn = document.querySelector('[data-modal="rating-modal"]');
+            const closeBtn = document.querySelector('.modal-close');
+
+            if (modalBtn) {
+                modalBtn.addEventListener('click', function () {
+                    modalOverlay.classList.add('active');
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function () {
+                    modalOverlay.classList.remove('active');
+                });
+            }
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function (e) {
+                if (e.target === modalOverlay) {
+                    modalOverlay.classList.remove('active');
+                }
+            });
+
+            // Handle rating form
+            const ratingForm = document.querySelector('.rating-form');
+            const ratingInputs = document.querySelectorAll('input[name="rating-radio"]');
+            const hiddenRating = document.querySelector('input[name="rating"]');
+
+            ratingInputs.forEach(input => {
+                input.addEventListener('change', function () {
+                    hiddenRating.value = this.value;
+                });
+            });
+
+            if (ratingForm) {
+                ratingForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Show flash message
+                    const flashMessages = document.getElementById('flash-messages');
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'flash-message success';
+                    messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> Your review has been submitted successfully!';
+
+                    flashMessages.appendChild(messageDiv);
+
+                    // Close modal and reset form
+                    modalOverlay.classList.remove('active');
+                    ratingForm.reset();
+
+                    // Auto-remove message after 5 seconds
+                    setTimeout(() => {
+                        messageDiv.remove();
+                    }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -16,8 +16,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-
-
 </head>
 <body>
     <!-- Header -->
@@ -36,13 +34,13 @@
                 <ul class="nav-links">
                     <li><a href="/template/index.html">Home</a></li>
                     <li><a href="/template/search.html">Find Rides</a></li>
-                    <li><a href="/template/offer-ride.html">Offer a Ride</a></li>
+                    <li><a href="/template/offer.html">Offer a Ride</a></li>
                     <li><a href="/template/faq.html">FAQ</a></li>
                     <li><a href="/template/contact.html">Contact Us</a></li>
                 </ul>
 
-                <div class="nav-auth">
-                    <a href="/template/login.html" class="btn btn-sm btn-outline">Login</a>
+                <div class="nav-links">
+                    <a href="/template/login.html" class="btn btn-sm btn-outline">Log in</a>
                     <a href="/template/signup.html" class="btn btn-sm btn-primary">Sign Up</a>
                 </div>
             </nav>
@@ -50,7 +48,10 @@
     </header>
 
     <!-- Flash Messages -->
-    <!-- Main Content -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -211,12 +212,11 @@
             <p>Join students from MMCL, UP, Ateneo, DLSU, UST, SBCA, and FEU using TripSync for affordable and convenient travel. Our platform makes it easy to connect riders and passengers across Philippine universities.</p>
 
             <div class="cta-buttons">
-                <a href="/template/auth.html" class="btn btn-primary btn-lg">Sign Up Now</a>
+                <a href="/template/signup.html" class="btn btn-primary btn-lg">Sign Up Now</a>
                 <a href="/template/search.html" class="btn btn-outline btn-lg">Browse Available Rides</a>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -254,7 +254,7 @@
                     <h3 class="footer-heading">Support</h3>
                     <ul class="footer-links">
                         <li><a href="/template/faq.html">FAQ</a></li>
-                        <li><a href="/template/contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
@@ -283,6 +283,5 @@
     <script src="/static/js/offer.js"></script>
     <script src="/static/js/profiles.js"></script>
     <script src="/static/js/booking.js"></script>
-
 </body>
 </html>

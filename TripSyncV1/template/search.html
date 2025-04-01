@@ -16,8 +16,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-
-
 </head>
 <body>
     <!-- Header -->
@@ -41,16 +39,19 @@
                     <li><a href="/template/contact.html">Contact Us</a></li>
                 </ul>
 
-                <div class="nav-auth">
-                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
-                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                <div class="nav-links">
+                    <a href="/template/login.html" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/template/signup.html" class="btn btn-sm btn-primary">Sign Up</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- Flash Messages -->
-    <!-- Main Content -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
     <!-- Search Results Page -->
     <section class="search-results">
         <div class="container">
@@ -120,23 +121,107 @@
                 <i class="fas fa-search fa-3x mb-3" style="color: var(--gray-color);"></i>
                 <h3>No rides found</h3>
                 <p class="mb-4">Try adjusting your search criteria or offer a ride instead.</p>
-                <a href="/offer" class="btn btn-primary">Offer a Ride</a>
+                <a href="offer.html" class="btn btn-primary">Offer a Ride</a>
             </div>
 
             <!-- Results List -->
             <div class="ride-list" style="display: none;">
-                <!-- Ride cards will be dynamically loaded here -->
+                <!-- Sample ride cards for static HTML version -->
+                <div class="card ride-card">
+                    <div class="ride-card-header">
+                        <div class="ride-user">
+                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=800000&color=FFD700" alt="John Smith" class="avatar">
+                            <div>
+                                <h3 class="user-name">John Smith</h3>
+                                <div class="user-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ride-price">₱250</div>
+                    </div>
+                    <div class="ride-card-body">
+                        <div class="ride-route">
+                            <div class="ride-stop">
+                                <div class="stop-time">08:00</div>
+                                <div class="stop-indicator start"></div>
+                                <div class="stop-location">MMCL Main Campus</div>
+                            </div>
+                            <div class="ride-stop">
+                                <div class="stop-time">09:30</div>
+                                <div class="stop-indicator end"></div>
+                                <div class="stop-location">Ateneo de Manila University</div>
+                            </div>
+                        </div>
+                        <div class="ride-details">
+                            <div class="ride-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 20, 2025</span>
+                            </div>
+                            <div class="ride-detail">
+                                <i class="fas fa-users"></i>
+                                <span>2 seats available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ride-card-footer">
+                        <a href="ride-details.html?id=1" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+
+                <div class="card ride-card">
+                    <div class="ride-card-header">
+                        <div class="ride-user">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=00008B&color=FFFFFF" alt="Sarah Johnson" class="avatar">
+                            <div>
+                                <h3 class="user-name">Sarah Johnson</h3>
+                                <div class="user-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ride-price">₱300</div>
+                    </div>
+                    <div class="ride-card-body">
+                        <div class="ride-route">
+                            <div class="ride-stop">
+                                <div class="stop-time">10:00</div>
+                                <div class="stop-indicator start"></div>
+                                <div class="stop-location">Ateneo de Manila University</div>
+                            </div>
+                            <div class="ride-stop">
+                                <div class="stop-time">11:30</div>
+                                <div class="stop-indicator end"></div>
+                                <div class="stop-location">De La Salle University</div>
+                            </div>
+                        </div>
+                        <div class="ride-details">
+                            <div class="ride-detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 21, 2025</span>
+                            </div>
+                            <div class="ride-detail">
+                                <i class="fas fa-users"></i>
+                                <span>4 seats available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ride-card-footer">
+                        <a href="ride-details.html?id=2" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div>
-                    <a href="/" class="footer-logo">
+                    <a href="/template/index.html" class="footer-logo">
                         <img src="/static/images/mmcl-logo.svg" alt="MMCL Logo" style="height: 32px; margin-right: 10px;">
                         TripSync
                     </a>
@@ -191,11 +276,24 @@
 
     <!-- JavaScript -->
     <script src="/static/js/main.js"></script>
-    <script src="/static/js/auth.js"></script>
     <script src="/static/js/search.js"></script>
-    <script src="/static/js/offer.js"></script>
-    <script src="/static/js/profiles.js"></script>
-    <script src="/static/js/booking.js"></script>
 
+    <script>
+        // For static HTML, show the sample rides immediately
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.querySelector('.loading-indicator').style.display = 'none';
+                document.querySelector('.ride-list').style.display = 'block';
+            }, 500);
+
+            // Set up filter click handlers
+            document.querySelectorAll('.filter').forEach(filter => {
+                filter.addEventListener('click', function () {
+                    // Toggle active class
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-
-        Sign Up - TripSync
-
-    </title>
+    <title>Sign Up - TripSync</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +16,6 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-
-
 </head>
 <body>
     <!-- Header -->
@@ -45,48 +39,28 @@
                     <li><a href="/template/contact.html">Contact Us</a></li>
                 </ul>
 
-                <div class="nav-auth">
-                    <a href="/auth?action=login" class="btn btn-sm btn-outline">Login</a>
-                    <a href="/auth?action=register" class="btn btn-sm btn-primary">Sign Up</a>
+                <div class="nav-links">
+                    <a href="/template/login.html" class="btn btn-sm btn-outline">Login</a>
+                    <a href="/template/signup.html" class="btn btn-sm btn-primary">Sign Up</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <!-- Flash Messages -->
-    <!-- Main Content -->
+    <div id="flash-messages">
+        <!-- Flash messages will be inserted here by JavaScript -->
+    </div>
+
     <!-- Authentication Page -->
     <section class="auth-container">
         <div class="container">
             <div class="auth-tabs">
-                <div class="auth-tab " data-tab="login">Login</div>
+                <div class="auth-tab" data-tab="login">Login</div>
                 <div class="auth-tab active" data-tab="register">Sign Up</div>
             </div>
 
             <div class="auth-card">
-                <!-- Login Form -->
-                <form id="login-form" class="auth-form" style="display: none;">
-                    <h2>Welcome Back!</h2>
-
-                    <div class="form-group">
-                        <label for="login-email">Email</label>
-                        <input type="email" class="form-control" id="login-email" name="email" placeholder="Enter your email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" class="form-control" id="login-password" name="password" placeholder="Enter your password" required>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
-
-                    <div class="form-footer">
-                        <p>Don't have an account? <a href="#" class="auth-tab-link" data-tab="register">Sign Up</a></p>
-                    </div>
-                </form>
-
                 <!-- Registration Form -->
                 <form id="register-form" class="auth-form" style="display: block;">
                     <h2>Join TripSync</h2>
@@ -116,13 +90,12 @@
                     </div>
 
                     <div class="form-footer">
-                        <p>Already have an account? <a href="#" class="auth-tab-link" data-tab="login">Login</a></p>
+                        <p>Already have an account? <a href="login.html" class="auth-tab-link" data-tab="login">Login</a></p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
@@ -185,10 +158,6 @@
     <!-- JavaScript -->
     <script src="/static/js/main.js"></script>
     <script src="/static/js/auth.js"></script>
-    <script src="/static/js/search.js"></script>
-    <script src="/static/js/offer.js"></script>
-    <script src="/static/js/profiles.js"></script>
-    <script src="/static/js/booking.js"></script>
 
     <script>
         // Add event listeners to the tab links
@@ -197,11 +166,28 @@
                 e.preventDefault();
                 const tabType = this.getAttribute('data-tab');
 
-                // Simulate clicking the corresponding tab
-                document.querySelector(`.auth-tab[data-tab="${tabType}"]`).click();
+                // In static HTML, we'll navigate to the corresponding page instead
+                if (tabType === 'register') {
+                    window.location.href = '/template/signup.html';
+                } else if (tabType === 'login') {
+                    window.location.href = '/template/login.html';
+                }
+            });
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.auth-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                const tabType = this.getAttribute('data-tab');
+
+                // In static HTML, we'll navigate to the corresponding page instead
+                if (tabType === 'register') {
+                    window.location.href = '/template/signup.html';
+                } else if (tabType === 'login') {
+                    window.location.href = '/template/login.html';
+                }
             });
         });
     </script>
-
 </body>
 </html>
